@@ -74,10 +74,10 @@ function calculateScore(cards) {
   let hasAce = false;
 
   for (let card of cards) {
-    if (card.value === "Ace") {
+    if (card.value === "ace") {
       hasAce = true;
       score += 11;
-    } else if (["King", "Queen", "Jack"].includes(card.value)) {
+    } else if (["king", "queen", "jack"].includes(card.value)) {
       score += 10;
     } else {
       score += parseInt(card.value);
