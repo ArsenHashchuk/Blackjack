@@ -43,14 +43,15 @@ function createDeck() {
     "8",
     "9",
     "10",
-    "J",
-    "Q",
-    "K",
-    "A",
+    "Jack",
+    "Queen",
+    "King",
+    "Ace",
   ];
   for (let suit of suits) {
     for (let value of values) {
       deck.push({ suit, value });
+      console.log(suit, value);
     }
   }
   return deck;
@@ -73,10 +74,10 @@ function calculateScore(cards) {
   let hasAce = false;
 
   for (let card of cards) {
-    if (card.value === "A") {
+    if (card.value === "Ace") {
       hasAce = true;
       score += 11;
-    } else if (["K", "Q", "J"].includes(card.value)) {
+    } else if (["King", "Queen", "Jack"].includes(card.value)) {
       score += 10;
     } else {
       score += parseInt(card.value);
@@ -103,7 +104,7 @@ function updateUI() {
     if (index === 1 && !dealerHasRevealed) {
       img.src = `deck/back.png`;
     } else {
-      img.src = `deck/${card.value}-of-${card.suit.toLowerCase()}.png`;
+      img.src = `deck/${card.value.toLowerCase()}-of-${card.suit.toLowerCase()}.png`;
     }
 
     img.alt = `${card.value} of ${card.suit}`;
