@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="gameName">Blackjack</h1>
+      <div class="game-board">
+        <div class="player-area">
+          <h3 class="generalScorePlayer">0</h3>
+          <h2 class="player">Player</h2>
+          <div class="wrapper">
+            <div class="cards" id="player-cards"></div>
+          </div>
+          <div class="score" id="player-score">Score: 0</div>
+        </div>
+        <div class="dealer-area">
+          <h3 class="generalScoreDealer">0</h3>
+          <h2 class="dealer">Dealer</h2>
+          <div class="wrapper">
+            <div class="cards" id="dealer-cards"></div>
+          </div>
+          <div class="score" id="dealer-score">Score: 0</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="deal-button">Deal</button>
+        <button id="hit-button" disabled>Hit</button>
+        <button id="stand-button" disabled>Stand</button>
+        <button id="reset-button" disabled>Reset</button>
+      </div>
+      <div id="message"></div>
+      <div id="info-btn" class="show-modal">
+        <i
+          class="fa fa-question"
+          style="
+            font-size: 24px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            padding: 0 5px;
+            cursor: pointer;
+          "
+        ></i>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2 style="text-align: center">Blackjack Rules</h2>
+
+      <h3>Objective:</h3>
+      <p style="margin-bottom: 20px">
+        The goal of Blackjack is to beat the dealer's hand without going over
+        21.
+      </p>
+
+      <h3>Card Values</h3>
+      <ul>
+        <li><strong>Number Cards (2-10):</strong> Worth their face value.</li>
+        <li><strong>Face Cards (K, Q, J):</strong> Worth 10 points each.</li>
+        <li>
+          <strong>Aces (A):</strong> Can be worth 1 or 11 points, whichever is
+          more favorable to the hand.
+        </li>
+      </ul>
+
+      <h3 style="margin-top: 20px; text-align: center">How to Play</h3>
+      <h4>Deal:</h4>
+      <p style="margin-bottom: 20px">
+        The player and the dealer are each dealt two cards. The player's cards
+        are both face-up. The dealer has one card face-up and one card
+        face-down.
+      </p>
+
+      <h4>Player's Turn:</h4>
+      <ul>
+        <li>
+          <strong>Hit:</strong> The player can choose to take an additional card
+          to try to get closer to 21.
+        </li>
+        <li>
+          <strong>Stand:</strong> The player can choose to keep their current
+          hand and end their turn.
+        </li>
+      </ul>
+
+      <h4 style="margin-top: 20px">Dealer's Turn:</h4>
+      <p>
+        The dealer reveals their face-down card. The dealer must hit if their
+        hand is 16 or lower and must stand on 17 or higher.
+      </p>
+
+      <h3 style="margin-top: 20px; text-align: center; padding-bottom: 5px">
+        Winning the Game
+      </h3>
+      <ul>
+        <li>
+          <strong>Blackjack:</strong> If the player’s initial two cards total
+          21, they win automatically unless the dealer also has Blackjack.
+        </li>
+        <li>
+          <strong>Bust:</strong> If the player or dealer’s hand exceeds 21, they
+          bust and lose the game.
+        </li>
+        <li>
+          <strong>Comparison:</strong> If neither busts, the hand with the
+          higher total wins. If the totals are equal, the game is a tie (push).
+        </li>
+      </ul>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 800px;
+  height: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #34495e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 450px;
+}
+
+.generalScorePlayer {
+  margin-bottom: 5px;
+  font-size: 1.75rem;
+}
+.generalScoreDealer {
+  margin-bottom: 5px;
+  font-size: 1.75rem;
+}
+
+.player-area {
+  height: 450px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+.dealer-area {
+  height: 450px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cards .card {
+  width: 50px;
+  height: auto;
+  background-color: #fff;
+  color: black;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+  height: 250px;
+  width: auto;
+  margin: 15px;
+}
+
+.score {
+  font-size: 28px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #f39c12;
+}
+
+#info-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+/* for modals */
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+
+  background-color: #2c3e50;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: start;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.card-image {
+  width: 165px;
+  height: 165px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-container {
+    padding: 10px;
+    margin: 25px 15px;
+  }
+
+  .game-board {
+    align-items: center;
+  }
+
+  .cards .card {
+    width: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .score {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #message {
+    font-size: 1.5rem;
+  }
+
+  .modal {
+    width: 80%;
+    padding: 3rem;
+  }
+  .card-image {
+    height: 140px;
+  }
+  .wrapper {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow: hidden;
+  }
+  .game-container {
+    padding: 5px;
+    height: 95vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .gameName {
+    margin-top: 5px;
+  }
+
+  .game-board {
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+  }
+
+  .cards .card {
+    width: 15px;
+    font-size: 16px;
+  }
+  .card-image {
+    height: 120px;
+  }
+
+  #player-score {
+    font-size: 20px;
+    margin-left: -7px;
+    margin-bottom: 115px;
+  }
+
+  #dealer-score {
+    font-size: 20px;
+    margin-bottom: 250px;
+    margin-left: -7px;
+  }
+  .player {
+    margin-left: -7px;
+  }
+  .dealer {
+    margin-left: -7px;
+  }
+
+  .generalScorePlayer {
+    position: absolute;
+    top: 57.5px;
+    right: 25px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .generalScoreDealer {
+    position: absolute;
+    top: 408px;
+    right: 25px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .player-area,
+  .dealer-area {
+    width: 80%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .player-area {
+    height: 50%;
+    margin-left: 0;
+  }
+  .dealer-area {
+    margin-right: 0;
+  }
+
+  .controls {
+    display: grid;
+    grid: 1fr 1fr/ 1fr 1fr;
+    gap: 12.5px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  #message {
+    font-size: 1.4rem;
+  }
+
+  .modal {
+    width: 90%;
+    max-height: 90%;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 2rem;
+  }
+
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  #info-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .close-modal {
+    top: 1.75rem;
+    right: 0.05rem;
+    font-size: 1rem;
+  }
+}
