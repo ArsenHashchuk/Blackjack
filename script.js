@@ -32,7 +32,7 @@ function startGame() {
 
 function createDeck() {
   let deck = [];
-  const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]; // черва, бубна, хреста, піка
+  const suits = ["hearts", "diamonds", "clubs", "spades"]; // черва, бубна, хреста, піка
   const values = [
     "2",
     "3",
@@ -43,10 +43,10 @@ function createDeck() {
     "8",
     "9",
     "10",
-    "Jack",
-    "Queen",
-    "King",
-    "Ace",
+    "jack",
+    "queen",
+    "king",
+    "ace",
   ];
   for (let suit of suits) {
     for (let value of values) {
