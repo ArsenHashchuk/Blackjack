@@ -1,5 +1,3 @@
-"use strict";
-
 let deck = [];
 let dealerCards = [];
 let playerCards = [];
