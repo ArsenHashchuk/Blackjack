@@ -320,3 +320,23 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
+//add favicon
+//add audio (fix positioning)
+//add timer
+
+//audio
+const audio = document.getElementById("audio");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const speakerIcon = document.getElementById("speakerIcon");
+
+playPauseBtn.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+    speakerIcon.classList.remove("fa-volume-mute");
+    speakerIcon.classList.add("fa-volume-up");
+  } else {
+    audio.pause();
+    speakerIcon.classList.remove("fa-volume-up");
+    speakerIcon.classList.add("fa-volume-mute");
+  }
+});

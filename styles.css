@@ -96,6 +96,12 @@ h2 {
   margin-top: 20px;
 }
 
+.speaker-btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 button {
   padding: 10px 20px;
   font-size: 16px;
