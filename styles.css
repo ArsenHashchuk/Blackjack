@@ -369,6 +369,10 @@ button:hover {
     top: 0.5rem;
     right: 0.5rem;
   }
+  .speaker-btn {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
 
   .close-modal {
     top: 1.75rem;
