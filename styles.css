@@ -369,4 +369,8 @@ button:hover {
     right: 0.05rem;
     font-size: 1rem;
   }
+
+  #message {
+    margin-top: -135px;
+  }
 }

@@ -26,9 +26,8 @@ function startGame() {
   document.getElementById("stand-button").disabled = false;
   document.getElementById("deal-button").disabled = true;
 
-  updateUI(); // Update the UI first to render cards
+  updateUI();
 
-  // Animate dealer's first and second card
   const dealerFirstCard = dealerCardsElement.children[0].querySelector("img");
   dealerFirstCard.classList.add("fadeIn");
   dealerFirstCard.addEventListener("animationend", () => {
@@ -135,7 +134,7 @@ function updateUI() {
     }
 
     img.alt = `${card.value} of ${card.suit}`;
-    img.className = "card-image"; // Removed the fadeIn class here for now
+    img.className = "card-image";
 
     cardElement.appendChild(img);
     dealerCardsElement.appendChild(cardElement);
@@ -148,7 +147,7 @@ function updateUI() {
     const img = document.createElement("img");
     img.src = `deck/${card.value}-of-${card.suit.toLowerCase()}.png`;
     img.alt = `${card.value} of ${card.suit}`;
-    img.className = "card-image"; // Removed the fadeIn class here for now
+    img.className = "card-image";
 
     cardElement.appendChild(img);
     playerCardsElement.appendChild(cardElement);
@@ -161,16 +160,14 @@ function updateUI() {
 }
 
 function hitCard() {
-  const newCard = drawCard(); // Draw a new card
+  const newCard = drawCard();
   playerCards.push(newCard);
   updateUI();
 
-  // Apply fadeIn animation to the newly drawn card
   const newCardElement =
     playerCardsElement.lastElementChild.querySelector("img");
   newCardElement.classList.add("fadeIn");
 
-  // Remove the animation class after the animation ends
   newCardElement.addEventListener("animationend", () => {
     newCardElement.classList.remove("fadeIn");
   });
@@ -196,26 +193,23 @@ function stand() {
       dealerCards.push(newDealerCard);
       updateUI();
 
-      // Apply fadeIn animation to the newly drawn dealer card
       const newDealerCardElement =
         dealerCardsElement.lastElementChild.querySelector("img");
       newDealerCardElement.classList.add("fadeIn");
 
-      // Remove the animation class after the animation ends
       newDealerCardElement.addEventListener("animationend", () => {
         newDealerCardElement.classList.remove("fadeIn");
       });
 
-      // Set a timeout to reveal the next card after this one has faded in
       dealerCardIndex++;
-      setTimeout(revealDealerCard, 600); // 600ms is the length of the fade-in animation
+      setTimeout(revealDealerCard, 600);
     } else {
-      updateUI(); // After all cards are drawn, update the UI
-      determineWinner(); // Determine the winner once all cards are dealt
+      updateUI();
+      determineWinner();
     }
   }
 
-  revealDealerCard(); // Start the process of revealing dealer cards one by one
+  revealDealerCard();
 }
 
 function determineWinner() {
@@ -227,7 +221,6 @@ function determineWinner() {
     generalScorePlayer++;
   } else if (playerScore === dealerScore) {
     messageElement.textContent = "It's a tie!";
-    generalScorePlayer++;
     generalScoreDealer++;
   } else {
     messageElement.textContent = "Dealer wins!";
@@ -275,7 +268,6 @@ function enableResetButton() {
 }
 
 function resetGame() {
-  // Add fadeOut effect to both card and card-image
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.add("fade-out");
     const cardImage = card.querySelector(".card-image");
@@ -284,7 +276,6 @@ function resetGame() {
     }
   });
 
-  // Wait for fade-out to complete before clearing the cards
   setTimeout(() => {
     dealerCards = [];
     playerCards = [];
@@ -298,7 +289,7 @@ function resetGame() {
 
     dealerCardsElement.innerHTML = "";
     playerCardsElement.innerHTML = "";
-  }, 500); // 500ms to match the fadeOut animation duration
+  }, 500);
 }
 
 //modals
@@ -329,8 +320,3 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
-
-//add favicon
-//add audio
-//add animations
-//add timer

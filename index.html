@@ -55,63 +55,71 @@
       <button class="close-modal">&times;</button>
       <h2 style="text-align: center">Blackjack Rules</h2>
 
-      <h3>Objective:</h3>
+      <h3>Мета гри:</h3>
       <p style="margin-bottom: 20px">
-        The goal of Blackjack is to beat the dealer's hand without going over
-        21.
+        Мета гри в Блекджек — набрати 21 очко, або суму очок, яка була б ближчою
+        до 21, але не перевищувала б 21.
       </p>
 
-      <h3>Card Values</h3>
+      <h3>Приклад гри у блекджек</h3>
+      <p style="margin-bottom: 20px">
+        За ігровим столом, як правило, знаходяться декілька гравців, які перед
+        початком гри роблять ставки. Після цього ділер роздає кожному гравцеві
+        по одній карті, кладе карту собі і знову дає гравцям по одній карті. Дві
+        карти гравця — початкова комбінація, яку можна намагатися поліпшити,
+        набираючи додаткові карти. Потім те ж саме робитиме ділер. Виграє той,
+        чия комбінація опиниться ціннішою.
+      </p>
+
+      <h3>Значення карт</h3>
       <ul>
-        <li><strong>Number Cards (2-10):</strong> Worth their face value.</li>
-        <li><strong>Face Cards (K, Q, J):</strong> Worth 10 points each.</li>
         <li>
-          <strong>Aces (A):</strong> Can be worth 1 or 11 points, whichever is
-          more favorable to the hand.
+          <strong>Туз (A):</strong> Може давати 1 або 11 очок, за бажанням
+          гравця.
+        </li>
+        <li><strong>Фігури (K, Q, J):</strong> Дають по 10 очок кожна.</li>
+        <li>
+          <strong>Числові карти:</strong> Дається кількість очок відповідно до
+          номіналу карти (дев'ятка — 9 очок, вісімка — 8 очок і т.д.).
         </li>
       </ul>
 
-      <h3 style="margin-top: 20px; text-align: center">How to Play</h3>
-      <h4>Deal:</h4>
+      <h3 style="margin-top: 15px">Як грати</h3>
       <p style="margin-bottom: 20px">
-        The player and the dealer are each dealt two cards. The player's cards
-        are both face-up. The dealer has one card face-up and one card
-        face-down.
+        Після того, як ділер здав карти гравцеві, гравець повинен вибрати один з
+        варіантів дій:
       </p>
-
-      <h4>Player's Turn:</h4>
       <ul>
         <li>
-          <strong>Hit:</strong> The player can choose to take an additional card
-          to try to get closer to 21.
+          <strong>Зупинитися (Stand):</strong> Якщо гравця влаштовує кількість
+          отриманих очок.
         </li>
         <li>
-          <strong>Stand:</strong> The player can choose to keep their current
-          hand and end their turn.
+          <strong>Узяти ще карту (Hit):</strong> Для того, щоб набрати більше
+          очок.
         </li>
       </ul>
 
-      <h4 style="margin-top: 20px">Dealer's Turn:</h4>
-      <p>
-        The dealer reveals their face-down card. The dealer must hit if their
-        hand is 16 or lower and must stand on 17 or higher.
+      <p style="margin-bottom: 20px">
+        Якщо гравець набрав більше 21 очка, оголошується
+        <strong>«перебір»</strong> (Bust), і гравець програє.
       </p>
 
-      <h3 style="margin-top: 20px; text-align: center; padding-bottom: 5px">
-        Winning the Game
-      </h3>
+      <h3>Правила для ділера</h3>
+      <p style="margin-bottom: 20px">
+        Ділер зобов'язаний брати додаткові карти, якщо сума його очок менше за
+        17, і повинен зупинитися, якщо очок 17 і більше.
+      </p>
+
+      <h3>Виграш у грі</h3>
       <ul>
         <li>
-          <strong>Blackjack:</strong> If the player’s initial two cards total
-          21, they win automatically unless the dealer also has Blackjack.
+          <strong>Гравець виграв:</strong> Якщо сума очок гравця більша, ніж у
+          ділера, не перевищуючи 21.
         </li>
         <li>
-          <strong>Bust:</strong> If the player or dealer’s hand exceeds 21, they
-          bust and lose the game.
-        </li>
-        <li>
-          <strong>Comparison:</strong> If neither busts, the hand with the
-          higher total wins. If the totals are equal, the game is a tie (push).
+          <strong>Нічия:</strong> Якщо суми очок гравця та ділера однакові, і у
+          жодного немає блекджеку.
         </li>
       </ul>
     </div>
