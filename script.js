@@ -244,12 +244,16 @@ function checkForBlackjack() {
   const dealerScore = calculateScore(dealerCards);
 
   if (playerScore === 21) {
+    dealerHasRevealed = true;
+    updateUI();
     messageElement.textContent = "Blackjack! You win!";
     generalScorePlayer++;
     updateGeneralScores();
     disableButtons();
     enableResetButton();
   } else if (dealerScore === 21) {
+    dealerHasRevealed = true;
+    updateUI();
     messageElement.textContent = "Dealer has Blackjack! Dealer wins!";
     generalScoreDealer++;
     updateGeneralScores();
@@ -320,9 +324,6 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
-//add favicon
-//fix dealer blackjack not revealing cards
-//add timer
 
 //audio
 const audio = document.getElementById("audio");
@@ -340,3 +341,7 @@ playPauseBtn.addEventListener("click", function () {
     speakerIcon.classList.add("fa-volume-mute");
   }
 });
+
+//add favicon
+//fix dealer blackjack not revealing cards
+//add timer
