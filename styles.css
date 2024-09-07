@@ -371,7 +371,8 @@ button:hover {
   }
   .speaker-btn {
     top: 0.5rem;
-    left: 0.5rem;
+    left: 0.05rem;
+    font-size: 14px;
   }
 
   .close-modal {
@@ -381,6 +382,6 @@ button:hover {
   }
 
   #message {
-    margin-top: -135px;
+    margin-top: -132.5px;
   }
 }

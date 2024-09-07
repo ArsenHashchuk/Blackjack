@@ -321,7 +321,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 //add favicon
-//add audio (fix positioning)
+//fix dealer blackjack not revealing cards
 //add timer
 
 //audio
