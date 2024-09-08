@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blackjack Game</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -16,26 +17,26 @@
       <div class="game-board">
         <div class="player-area">
           <h3 class="generalScorePlayer">0</h3>
-          <h2 class="player">Player</h2>
+          <h2 class="player">Гравець</h2>
           <div class="wrapper">
             <div class="cards" id="player-cards"></div>
           </div>
-          <div class="score" id="player-score">Score: 0</div>
+          <div class="score" id="player-score">Рахунок: 0</div>
         </div>
         <div class="dealer-area">
           <h3 class="generalScoreDealer">0</h3>
-          <h2 class="dealer">Dealer</h2>
+          <h2 class="dealer">Дилер</h2>
           <div class="wrapper">
             <div class="cards" id="dealer-cards"></div>
           </div>
-          <div class="score" id="dealer-score">Score: 0</div>
+          <div class="score" id="dealer-score">Рахунок: 0</div>
         </div>
       </div>
       <div class="controls">
-        <button id="deal-button">Deal</button>
-        <button id="hit-button" disabled>Hit</button>
-        <button id="stand-button" disabled>Stand</button>
-        <button id="reset-button" disabled>Reset</button>
+        <button id="deal-button">Роздати</button>
+        <button id="hit-button" disabled>Ще карту</button>
+        <button id="stand-button" disabled>Утриматись</button>
+        <button id="reset-button" disabled>Скинути</button>
       </div>
       <div id="message"></div>
       <div id="info-btn" class="show-modal">
@@ -62,7 +63,7 @@
     </div>
     <div class="modal hidden">
       <button class="close-modal">&times;</button>
-      <h2 style="text-align: center">Blackjack Rules</h2>
+      <h2 style="text-align: center">Правила у Blackjack</h2>
 
       <h3>Мета гри:</h3>
       <p style="margin-bottom: 20px">

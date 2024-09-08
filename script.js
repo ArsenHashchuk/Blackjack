@@ -128,9 +128,9 @@ function updateUI() {
     const img = document.createElement("img");
 
     if (index === 1 && !dealerHasRevealed) {
-      img.src = `deck/back.png`;
+      img.src = `images/deck/back.png`;
     } else {
-      img.src = `deck/${card.value.toLowerCase()}-of-${card.suit.toLowerCase()}.png`;
+      img.src = `images/deck/${card.value.toLowerCase()}-of-${card.suit.toLowerCase()}.png`;
     }
 
     img.alt = `${card.value} of ${card.suit}`;
@@ -145,7 +145,7 @@ function updateUI() {
     cardElement.className = "card";
 
     const img = document.createElement("img");
-    img.src = `deck/${card.value}-of-${card.suit.toLowerCase()}.png`;
+    img.src = `images/deck/${card.value}-of-${card.suit.toLowerCase()}.png`;
     img.alt = `${card.value} of ${card.suit}`;
     img.className = "card-image";
 
@@ -153,10 +153,10 @@ function updateUI() {
     playerCardsElement.appendChild(cardElement);
   });
 
-  dealerScoreElement.textContent = `Score: ${
+  dealerScoreElement.textContent = `Рахунок: ${
     dealerHasRevealed ? calculateScore(dealerCards) : "?"
   }`;
-  playerScoreElement.textContent = `Score: ${calculateScore(playerCards)}`;
+  playerScoreElement.textContent = `Рахунок: ${calculateScore(playerCards)}`;
 }
 
 function hitCard() {
@@ -173,7 +173,7 @@ function hitCard() {
   });
 
   if (calculateScore(playerCards) > 21) {
-    messageElement.textContent = "You bust! Dealer wins!";
+    messageElement.textContent = "Ви перебрали! Дилер перемагає!";
     generalScoreDealer++;
 
     updateGeneralScores();
@@ -217,13 +217,13 @@ function determineWinner() {
   const dealerScore = calculateScore(dealerCards);
 
   if (dealerScore > 21 || playerScore > dealerScore) {
-    messageElement.textContent = "You win!";
+    messageElement.textContent = "Ви перемогли!";
     generalScorePlayer++;
   } else if (playerScore === dealerScore) {
-    messageElement.textContent = "It's a tie!";
+    messageElement.textContent = "Нічия!";
     generalScoreDealer++;
   } else {
-    messageElement.textContent = "Dealer wins!";
+    messageElement.textContent = "Дилер переміг!";
     generalScoreDealer++;
   }
 
@@ -246,7 +246,7 @@ function checkForBlackjack() {
   if (playerScore === 21) {
     dealerHasRevealed = true;
     updateUI();
-    messageElement.textContent = "Blackjack! You win!";
+    messageElement.textContent = "Блекджек! Ви перемогли!";
     generalScorePlayer++;
     updateGeneralScores();
     disableButtons();
@@ -254,7 +254,7 @@ function checkForBlackjack() {
   } else if (dealerScore === 21) {
     dealerHasRevealed = true;
     updateUI();
-    messageElement.textContent = "Dealer has Blackjack! Dealer wins!";
+    messageElement.textContent = "У Дилера блекджек! Дилер переміг!";
     generalScoreDealer++;
     updateGeneralScores();
     disableButtons();
@@ -288,8 +288,8 @@ function resetGame() {
     document.getElementById("deal-button").disabled = false;
     document.getElementById("reset-button").disabled = true;
 
-    dealerScoreElement.textContent = "Score: 0";
-    playerScoreElement.textContent = "Score: 0";
+    dealerScoreElement.textContent = "Рахунок: 0";
+    playerScoreElement.textContent = "Рахунок: 0";
 
     dealerCardsElement.innerHTML = "";
     playerCardsElement.innerHTML = "";
