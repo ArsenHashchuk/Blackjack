@@ -328,6 +328,7 @@ document.addEventListener("keydown", (e) => {
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const speakerIcon = document.getElementById("speakerIcon");
+audio.volume = 0.07;
 
 playPauseBtn.addEventListener("click", function () {
   if (audio.paused) {
