@@ -15,13 +15,13 @@ body {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Track color */
-  border-radius: 10px; /* Rounded scrollbar track */
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Thumb (scroll box) color */
-  border-radius: 10px; /* Rounded scrollbar thumb */
-  border: 3px solid #f1f1f1; /* Optional: Border around thumb for padding effect */
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -156,7 +156,7 @@ button:hover {
   position: absolute;
   top: 1.2rem;
   right: 2rem;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
   border: none;
