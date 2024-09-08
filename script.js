@@ -77,7 +77,6 @@ function createDeck() {
   for (let suit of suits) {
     for (let value of values) {
       deck.push({ suit, value });
-      console.log(suit, value);
     }
   }
   return deck;

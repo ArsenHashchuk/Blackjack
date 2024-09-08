@@ -98,8 +98,8 @@ h2 {
 
 .speaker-btn {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 0.5rem;
+  left: 0.05rem;
 }
 
 button {
@@ -213,7 +213,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .modal {
     width: 60%;
     padding: 4rem;
@@ -222,7 +222,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .modal {
     width: 80%;
     padding: 2rem;
@@ -231,7 +231,13 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .controls {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+    gap: 12.5px;
+  }
+
   .game-container {
     padding: 10px;
     margin: 25px 15px;
@@ -278,7 +284,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   body {
     overflow: hidden;
   }
