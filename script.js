@@ -341,7 +341,3 @@ playPauseBtn.addEventListener("click", function () {
     speakerIcon.classList.add("fa-volume-mute");
   }
 });
-
-//add favicon
-//fix dealer blackjack not revealing cards
-//add timer
