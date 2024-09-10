@@ -299,6 +299,11 @@ button:hover {
   .wrapper {
     margin: 0 15px;
   }
+  .close-modal {
+    top: 1.75rem;
+    right: 0.05rem;
+    font-size: 1.75rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
